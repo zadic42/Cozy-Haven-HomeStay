@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    @apply bg-light text-dark font-sans scroll-smooth;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer utilities {
+  .luxury-shadow {
+    box-shadow: 0 20px 50px -10px rgba(0,0,0,0.06);
+    transition: box-shadow 0.4s ease, transform 0.4s ease;
+  }
+  .luxury-shadow:hover {
+    box-shadow: 0 30px 60px -15px rgba(0,0,0,0.12);
+  }
+  .glass-effect {
+    @apply bg-white/75 backdrop-blur-xl border-b border-white/30 shadow-sm transition-all duration-500;
+  }
+  .glass-dark {
+    @apply bg-dark/80 backdrop-blur-xl border border-white/10 shadow-xl;
+  }
+  .text-gradient {
+    background: linear-gradient(135deg, #D4AF37 0%, #C59B27 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
